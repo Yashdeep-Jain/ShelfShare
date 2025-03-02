@@ -1,4 +1,4 @@
-package com.jainyash.shelf_share;
+package com.jainyash.shelf;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
