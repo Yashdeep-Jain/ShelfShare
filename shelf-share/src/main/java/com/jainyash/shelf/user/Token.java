@@ -17,7 +17,7 @@ public class Token {
     @GeneratedValue
     private Integer id;
     private String token;
-    private LocalDateTime createdDate;
+    private LocalDateTime createdAt;
     private LocalDateTime expiresAt;
     private LocalDateTime validatedAt;
 

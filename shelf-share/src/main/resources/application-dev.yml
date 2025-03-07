@@ -1,8 +1,8 @@
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/shelf_share
-    username: username
-    password: password
+    username: postgres
+    password: root
   jpa:
     hibernate:
       ddl-auto: update
@@ -11,7 +11,7 @@ spring:
       hibernate:
         format_sql: true
     database: postgresql
-    database-platform: org.hibernate.dialect.PostgreSLDialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
   mail:
     host: localhost
     port: 1025
@@ -27,3 +27,14 @@ spring:
         connectiontimeout: 5000
         timeout: 3000
         writetimeout: 5000
+application:
+  security:
+    jwt:
+      secret-key: 97668867d8492c47ebb32dbbe938b8ab651b694a6b3f30c5ca65f37b075b439c
+      expiration: 86400000
+  mailing:
+    frontend:
+      activation-url: http://localhost:4200/activate-account
+
+server:
+    port: 8088

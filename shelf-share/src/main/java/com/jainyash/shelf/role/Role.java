@@ -19,7 +19,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "_user")
+@Table(name = "_role")
 @EntityListeners(AuditingEntityListener.class)
 public class Role {
     @Id
