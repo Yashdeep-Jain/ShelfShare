@@ -1,5 +1,7 @@
 package com.jainyash.shelf.user;
 
+import com.jainyash.shelf.book.Book;
+import com.jainyash.shelf.history.BookTransactionHistory;
 import com.jainyash.shelf.role.Role;
 import jakarta.persistence.*;
 import lombok.*;
@@ -41,6 +43,12 @@ public class User implements UserDetails, Principal {
 
     @ManyToMany(fetch = FetchType.EAGER)
     private List<Role> roles;
+
+    @OneToMany(mappedBy = "owner")
+    private List<Book> books;
+
+    @OneToMany(mappedBy = "user")
+    private List<BookTransactionHistory> histories;
 
     @CreatedDate
     @Column(nullable = false, updatable = false)
